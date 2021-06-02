@@ -1,0 +1,1555 @@
+/*===========================Global styling==================================*/
+
+*{
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+	font-family: 'Roboto', sans-serif;
+}
+
+body{
+	font-family: Roboto,Arial,sans-serif;
+	background-color: #F1F3F6;
+	color: #212121;
+	overflow-x: hidden;
+	margin: 0;
+	padding: 0;
+}
+
+/*========================Container for All==================================*/
+
+.contain{
+	display: grid;
+    grid-template-columns: 100%;
+    grid-row-gap: 10px;
+    grid-column-gap: 6px;
+    margin-top: 6px;
+    padding: 2px 8px;
+}
+
+/*==========================Search-bar Section=============================*/
+
+#search-bar{
+	background-color: #2874F0;
+	width: 100vw;
+	height: 56px;
+	position: sticky;
+	top: 0px;
+	z-index: 20;	
+}
+
+.fa-search{
+	color: #2874F0;
+	margin-right: 1.2rem;
+}
+
+#search-bar #menu-container #logo .fa-bars{
+	display: none;!important
+}
+
+.fa-chevron-down{
+	color: black;
+}
+
+.abc{
+	font-size: 10px;
+}
+
+.abc,.fa-shopping-cart{
+	color: white;
+}
+
+#search-bar,#menu-container,#bar-container,#form-search,.cart-logo-wrapper{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#form-search input[type=text]{
+	width: 90%;
+	height: 30px;
+	padding: 4px 12px;
+    border: none;
+    outline: none;
+}
+
+#iconic{
+	width: clamp(220px,38vw,560px);
+	height: 36px;
+	background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: clamp(0px,2vw,6px);
+}
+
+.cart-logo-wrapper{
+	margin-left: clamp(-20px,-10vw,0px);
+}
+
+.btn{
+	width: 123px;
+	height: 30px;
+	background-color: white;
+	color: #2874F0;
+	padding: 6px auto;
+	margin-left: clamp(12px,4vw,59px);
+	border: none;
+	outline: none;
+	font-family: sans-serif;
+	font-weight: bolder;
+	position: relative;
+	z-index: 21;
+	cursor: pointer;
+}
+
+.more a,.cart a{
+	text-decoration: none;
+	color: white;
+	font-family: sans-serif; 
+	font-size: clamp(4px,2vw,15px);
+	font-weight: bolder;
+}
+
+.more,.cart{
+	margin-left: clamp(15px,2vw,40px);
+}
+
+#logo a{
+	text-decoration: none;
+	font-family: sans-serif;
+	color: white;
+	font-size: 11px;
+    font-style: italic;
+}
+
+#logo img{
+    width: 70px;
+    height: 17px;
+    display: block;
+    margin-bottom: -4px;
+}
+
+#logo a img{
+	width: clamp(8px,1vw,10px);
+	height: clamp(8px,1vw,10px);
+	display: inline-block;
+	margin-bottom: 0px;
+}
+
+.logo-contain img,.logo-contain a img{
+	margin-bottom: 0px;
+}
+
+#logo a span{
+   color: #FEE608;
+}
+
+/*===============================tooltip==================================*/
+.tooltip{
+	font-size: 12px;
+	width: 236px;
+	background-color: white;
+	z-index: 20;
+    position: fixed;
+    top: 56px;
+    left: 60%;
+    box-shadow: -1px 1px 12px;
+    display: none;
+    z-index: 20;
+    cursor: pointer;
+}
+
+.tooltip-1{
+	width: 100%;
+	height: 60px;
+	display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-bottom: 1px solid #F1F3F6;
+}
+
+.tooltip-1 p a span{
+	color: #2874F0;
+}
+
+.tooltip-1 p a span:hover{
+	text-decoration: underline;
+}
+
+.tooltip-2{
+	width: 100%;
+	height: 50px;
+	border-bottom: 1px solid #F1F3F6;
+	display: flex;
+	align-items: center;
+	padding-left: 10px;
+    padding-right: 10px;
+}
+
+.tooltip-2:hover{
+	background-color: #F9F9F9;
+}
+
+.tooltip-2 a,.tooltip-1 p a{
+	text-decoration: none;
+    color: black;
+}
+
+.tooltip-2 .fas,.far{
+	color: #2874F0;
+}
+
+.tooltip::before{
+	content: " ";
+	border: 20px solid transparent;
+	border-bottom: 20px solid white;
+	width: 0px;
+	position: absolute;
+	top: -32px;
+    left: 90px;
+}
+
+.tooltip::after{
+	content: " ";
+	width: 125px;
+	height: 26px;
+	position: absolute;
+	top: -13px;
+    left: 50px;
+
+}
+
+.more-tooltip{
+	width: 228px;
+	height: 260px;
+	font-size: 12px;
+	background-color: white;
+	position: fixed;
+	top: 56px;
+    left: 68%;
+    box-shadow: -2px 2px 12px;
+    display: none;
+    z-index: 20;
+    cursor: pointer; 
+}
+
+.more-tooltip-1{
+	width: 100%;
+	height: 52px;
+	border-bottom: 1px solid #F1F3F6;
+	display: flex;
+	align-items: center;
+	padding-left: 10px;
+    padding-right: 10px;
+}
+
+.more-tooltip-1 a{
+	text-decoration: none;
+	color: black;
+}
+
+.more-tooltip::before{
+	content: " ";
+	border: 20px solid transparent;
+	border-bottom: 20px solid white;
+	width: 0px;
+	position: absolute;
+	top: -32px;
+    left: 90px;
+}
+
+.more-tooltip::after{
+	content: " ";
+	width: 125px;
+	height: 26px;
+	position: absolute;
+	top: -13px;
+    left: 50px;
+}
+
+.more-tooltip-1 .fas{
+	color: #2874F0;
+}
+
+.more-tooltip-1:hover{
+	background-color: #F9F9F9;
+}
+
+/*===============================Header Section===========================*/
+
+#header{
+	width: 100vw;
+	height: 114px;
+	background-color: white;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow-x: hidden;
+}
+
+#header .fas{
+	font-size: 9px;
+}
+
+#header-container{
+	width: 90%;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+
+#header-container a div img{
+	width: 64px;
+	height: 64px;
+}
+
+.img-wrap a{
+	text-decoration: none;
+	color: #212121;
+	font-size: 12px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.example {
+  max-width: 100vw;
+  height: 283px;
+}
+
+/*--------------------------------Deals section----------------------------*/
+
+#deals{
+	display: flex;
+	max-width: 100vw;
+}
+
+.wrap-deal{
+	width: 78vw;
+	height: calc(100vw*9/16)%;
+	margin-right: 4px;
+}
+
+.deal1{
+	
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	font-size: 22px;
+	color: #212121;
+	height: 80px;
+	margin-bottom: .4vh;
+	padding-right: 20px;
+	padding-left: 20px;
+}
+
+.deal1 h4{
+	font-family: 'Roboto', sans-serif;
+	font-weight: lighter;
+}
+
+.deal1 a button {
+	background-color: #2874F0;
+	color: white;
+	padding: 8px 12px;
+	border: 1px solid transparent;
+	border-radius: 2px;
+	outline: none;
+}
+
+.deal2{
+	width: 78vw;
+	display: flex;
+	padding: 20px 6px;
+}
+
+.deal3{
+	width: 22vw;
+}
+
+.deal3 img {
+	width: 100%;
+	height: 100%;
+	padding: 4px;
+}
+
+.deal{
+	background-color: #FFFFFF;
+	position: relative;
+	display: flex; 
+	overflow: hidden;
+	font-family: 'Roboto', sans-serif;
+}
+
+.wrap-deal-1{
+	display: flex;
+}
+
+
+.deal-1{
+	width: clamp(60px,11.3vw,195px);
+	height: clamp(100px,21vw,288.8px);
+	margin: .1vw clamp(19px,18vw,20px);
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+}
+
+.deal-1 a img{
+    object-fit: contain;
+	padding: 6px;
+}
+
+.deal-1 a {
+	text-decoration: none;
+	text-align: center;
+}
+
+.deal-1 .deal-2-inner,.deal-1 .deal-3-inner,.deal-1 .deal-4-inner{
+	font-size: 12px;
+	margin-top: 12px;
+    color: #212121;
+    white-space: nowrap;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+}
+
+.deal-1 .deal-3-inner{
+	color: #388E3C;
+}
+
+.deal-1 .deal-4-inner{
+	color: #7A7A7A;
+}
+
+.deal-1 img:hover{
+	transform: scale3d(1.05,1.05,1.05);
+}
+
+.deal2 .dealicon{
+	height: 107px;
+	width: 47px;
+	background-color: white;
+	position: absolute;
+	top: 50%;
+	right: 0px;
+	transform: translateY(-50%);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	box-shadow: -2px -2px 8px;
+	border-radius: 4px 0 0 4px;
+	cursor: pointer;
+	z-index: 19;
+}
+
+.deal2 .dealicons{
+	position: absolute;
+	border-radius: 0px 4px 4px 0px;
+	top: 50%;
+	left: 0px;
+	transform: translateY(-50%);
+}
+
+/*------------------------------------deals images section--------------------*/
+
+.deals-images-wrapper{
+	display: grid;
+	grid-template-rows: 100%;
+	grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+	grid-gap: 4px 4px;
+}
+
+.deal-image img{
+	width: 100%;
+	height: 100%;
+}
+
+/*================================Electronics-images===========================*/
+
+.electronics-images-wrapper{
+	display: grid;
+	grid-template-rows: 100%;
+	grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+	grid-gap: 4px 4px;
+}
+
+/*===============================footwear section============================*/
+
+.views{
+	width: 100%;
+	height: 84px;
+	background-color: white;
+	padding: 4px 22px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	font-size: 22px;
+	color: #212121;
+}
+
+.views h4{
+    font-weight: normal;
+    font-size: 1.2rem;
+}
+
+.views h6{
+   color: #7A7A7A;
+   font-size: 0.8rem;
+   font-weight: lighter;
+}
+
+.views a button{
+	background-color: #2874F0;
+	color: white;
+	padding: 8px 12px;
+	border: 1px solid transparent;
+	border-radius: 2px;
+	outline: none;
+}
+
+.footwear:hover .footwear-0{
+	transform: scale3d(1.05,1.05,1.05);
+}
+
+/*==============================Headphones and Speakers section===============*/
+
+#footwear,#Headphones-and-Speaker,#top-offer,#Women-Accessories,
+#top-deals-on-fashion,#best-of-electronics,#fashion-for-everyone,
+#top-picks-on-fashion,#mens-clothing,#furniture-best-sellers,
+#top-rated-appliances,#best-battery-phones,#Top-Accessories
+{
+    max-width: 100vw;
+}
+
+.wrap{
+	width: 100%;
+	height: calc(100vw*9/16)%;
+}
+
+.right-arrow,.left-arrow,.Top-offers-right-arrow,.Top-offers-left-arrow,
+.Women-Accessories-right-arrow,.Women-Accessories-left-arrow,
+.Top-Deals-on-Fashion-right-arrow,.Top-Deals-on-Fashion-left-arrow,
+.best-of-electronics-right-arrow,.best-of-electronics-left-arrow,
+.fashion-for-everyone-right-arrow,.fashion-for-everyone-left-arrow,
+.top-picks-on-fashion-right-arrow,.top-picks-on-fashion-left-arrow,
+.mens-clothing-right-arrow,.mens-clothing-left-arrow,
+.furniture-best-sellers-right-arrow,.furniture-best-sellers-left-arrow,
+.top-rated-appliances-right-arrow,.top-rated-appliances-left-arrow,
+.best-battery-phones-right-arrow,.best-battery-phones-left-arrow,
+.Top-Accessories-right-arrow,.Top-Accessories-left-arrow,
+.footwear-right-arrow,.footwear-left-arrow
+{
+	height: 107px;
+	width: 47px;
+	background-color: white;
+	position: absolute;
+	top: 50%;
+	right: 0px;
+	transform: translateY(-50%);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	box-shadow: -2px -2px 8px;
+	border-radius: 4px 0px 0px 4px;
+	cursor: pointer;
+	z-index: 19;
+}
+
+.left-arrow,.Top-offers-left-arrow,.Women-Accessories-left-arrow,
+.Top-Deals-on-Fashion-left-arrow,.best-of-electronics-left-arrow,
+.fashion-for-everyone-left-arrow,.top-picks-on-fashion-left-arrow,
+.mens-clothing-left-arrow,.furniture-best-sellers-left-arrow,
+.top-rated-appliances-left-arrow,.best-battery-phones-left-arrow,
+.Top-Accessories-left-arrow,.footwear-left-arrow{
+	position: absolute;
+	top: 50%;
+	left: 0px;
+	transform: translateY(-50%);
+	border-radius: 0px 4px 4px 0px;
+	box-shadow: 2px -2px 8px;
+}
+
+.Headphones-and-Speaker-container,.Top-offers-container,
+.Women-Accessories-container,.Top-Deals-on-Fashion-container,
+.best-of-electronics-container,.fashion-for-everyone-container,
+.top-picks-on-fashion-container,.mens-clothing-container,
+.furniture-best-sellers-container,.top-rated-appliances-container,
+.best-battery-phones-container,.Top-Accessories-container,.footwear-container
+{
+	width: 100%;
+	margin-top: 2px;
+	background-color: white;
+	overflow: hidden;
+	display: flex;
+	position: relative;
+	padding: 20px 6px;
+}
+
+.Headphones-and-Speaker-wrapper,.Top-offers-wrapper,
+.Women-Accessories-wrapper,.Top-Deals-on-Fashion-wrapper,
+.best-of-electronics-wrapper,.fashion-for-everyone-wrapper,
+.top-picks-on-fashion-wrapper,.mens-clothing-wrapper,
+.furniture-best-sellers-wrapper,.top-rated-appliances-wrapper,
+.best-battery-phones-wrapper,.Top-Accessories-wrapper,.footwear-wrapper
+{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.Headphones-and-Speaker,.Top-offers,.Women-Accessories,
+.Top-Deals-on-Fashion,.best-of-electronics,.fashion-for-everyone,
+.top-picks-on-fashion,.mens-clothing,.furniture-best-sellers,
+.top-rated-appliances,.best-battery-phones,.Top-Accessories,.footwear
+{
+	width: clamp(60px,11.3vw,195px);
+	height: clamp(100px,21vw,288.8px);
+	margin: .1vw clamp(19px,18vw,20px);
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+}
+
+.Headphones-and-Speaker a,.Top-offers a,.Women-Accessories a,
+.Top-Deals-on-Fashion a,.best-of-electronics a,.fashion-for-everyone a,
+.top-picks-on-fashion a,.mens-clothing a,.furniture-best-sellers a,
+.top-rated-appliances a,.best-battery-phones a,.Top-Accessories a,
+.footwear a
+{
+	text-decoration: none;
+	text-align: center;
+}
+
+.Headphones-and-Speaker a img,.Top-offers a img,.Women-Accessories a img,
+.Top-Deals-on-Fashion a img,.best-of-electronics a img,.fashion-for-everyone a img,
+.top-picks-on-fashion a img,.mens-clothing a img,.furniture-best-sellers a img,
+.top-rated-appliances a img,.best-battery-phones a img,.Top-Accessories a img,
+.footwear a img
+{
+	object-fit: contain;
+	padding: 6px;
+}
+
+.Headphones-and-Speaker-1,.Top-offers-1,.Women-Accessories-1,
+.Top-Deals-on-Fashion-1,.best-of-electronics-1,.fashion-for-everyone-1,
+.top-picks-on-fashion-1,.mens-clothing-1,.furniture-best-sellers-1,
+.top-rated-appliances-1,.best-battery-phones-1,.Top-Accessories-1,
+.footwear-1
+{
+	font-size: 12px;
+	color: #212121;
+	margin-top: 12px;
+	text-align: center;
+	white-space: nowrap;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+}
+
+.Headphones-and-Speaker-2,.Top-offers-2,.Women-Accessories-2,
+.Top-Deals-on-Fashion-2,.best-of-electronics-2,.fashion-for-everyone-2,
+.top-picks-on-fashion-2,.mens-clothing-2,.furniture-best-sellers-2,
+.top-rated-appliances-2,.best-battery-phones-2,.Top-Accessories-2,
+.footwear-2
+{
+	/*width: 165px;*/
+	/*height: 26.6px;*/
+	font-size: 12px;
+	color: #388E3C;
+	margin-top: 12px;
+	text-align: center;
+	white-space: nowrap;
+    overflow-x: hidden;
+}
+
+.Headphones-and-Speaker-3,.Top-offers-3,.Women-Accessories-3,
+.Top-Deals-on-Fashion-3,.best-of-electronics-3,.fashion-for-everyone-3,
+.top-picks-on-fashion-3,.mens-clothing-3,.furniture-best-sellers-3,
+.top-rated-appliances-3,.best-battery-phones-3,.Top-Accessories-3,
+.footwear-3
+{
+	/*width: 165px;*/
+	/*height: 26.6px;*/
+	font-size: 12px;
+	color: #7A7A7A;
+	margin-top: 12px;
+	text-align: center;
+	white-space: nowrap;
+    overflow-x: hidden;
+}
+
+.Headphones-and-Speaker:hover .Headphones-and-Speaker-0{
+	transform: scale3d(1.05,1.05,1.05);
+}
+
+/*==============================Top-offers section===========================*/
+
+
+.Top-offers:hover .Top-offers-0{
+	transform: scale3d(1.05,1.05,1.05);
+}
+
+/*==============================Women-Accessories section===============*/	
+
+.Women-Accessories:hover .Women-Accessories-0{
+	transform: scale3d(1.05,1.05,1.05);
+}
+
+/*=======================Top-Deals-on-Fashion section=========================*/
+
+.Top-Deals-on-Fashion:hover .Top-Deals-on-Fashion-0{
+	transform: scale3d(1.05,1.05,1.05);
+}
+
+/*==========================Best-Of-Electronics section====================*/
+
+.best-of-electronics:hover .best-of-electronics-0{
+	transform: scale3d(1.05,1.05,1.05);
+}
+
+/*========================fashion-for-everyone section=======================*/
+
+.fashion-for-everyone:hover .fashion-for-everyone-0{
+	transform: scale3d(1.05,1.05,1.05);
+}
+
+/*======================top-picks-on-fashion section=====================*/
+
+.top-picks-on-fashion:hover .top-picks-on-fashion-0{
+	transform: scale3d(1.05,1.05,1.05);
+}
+
+/*==========================mens-clothing section========================*/
+
+.mens-clothing:hover .mens-clothing-0{
+	transform: scale3d(1.05,1.05,1.05);
+}
+
+/*=========================furniture-best-sellers section===============*/
+
+.furniture-best-sellers:hover .furniture-best-sellers-0{
+	transform: scale3d(1.05,1.05,1.05);
+}
+
+/*===================Top-Rated-Appliances-For-You section===============*/
+
+.top-rated-appliances:hover .top-rated-appliances-0{
+	transform: scale3d(1.05,1.05,1.05);
+}
+
+/*==========================best-battery-phones section===================*/
+
+.best-battery-phones:hover .best-battery-phones-0{
+	transform: scale3d(1.05,1.05,1.05);
+}
+
+/*============================Top-Accessories section===================*/
+
+.Top-Accessories:hover .Top-Accessories-0{
+	transform: scale3d(1.05,1.05,1.05);
+}
+
+/*===========================footer section=============================*/
+
+#footer{
+	width: 100vw;
+    background-color: #172337;
+    font-size: 12px;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-wrapper{
+	width: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.about,.policy,.help,.social{
+    
+	text-align: left;
+	color: #878787;
+	font-size: .7rem;
+    font-weight: 400;
+	margin-bottom: 9px;
+}
+
+.mail,.register{
+	
+	height: auto;
+	font-size: .7rem;
+	color: #878787;
+	margin-bottom: 9px;
+}
+
+.about-wrapper a,
+.help-wrapper a,
+.policy-wrapper a,
+.social-wrapper a{
+	display: block;
+	color: #fff;
+	height: 24px;
+	text-decoration: none;
+}
+
+.mail-us-wrapper p,
+.register-wrapper p{
+	display: block;
+	color: #fff;
+	height: 18px;
+}
+
+.copyrights{
+	width: 100%;
+	height: 72.9px
+	border-top: 1px solid #454d5e;
+    padding: 25px 0;
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+/*=======================media queries Section=============================*/
+
+@media screen and (max-width: 1100px){
+
+/*===========================Deals Section==================================*/
+
+.deal1{
+	height: 50px;
+}
+
+.deal1 h4{
+	font-size: 18px;
+}
+
+.deal1 a button {
+	font-size: 11px;
+	padding: 6px 10px;
+}
+
+.deal-1{
+	width: clamp(60px,10vw,195px);
+	height: clamp(100px,22vw,288.8px);
+	margin: 1vw 2vw 0 2vw;
+}
+
+.deal-1 a img{
+    width: 120%;
+    height: 134px;
+}
+
+.deal-1 .deal-2-inner,.deal-1 .deal-3-inner,.deal-1 .deal-4-inner{
+	font-size: 11px;
+	margin-top: 9px;
+}
+
+.deal2 .dealicon{
+	height: 90px;
+	width: 40px;
+	font-size: 10px;
+}
+
+/*======================All Similar Sections========================*/
+
+.views{
+    font-size: 18px;
+	height: 50px;
+}
+
+.views h4{
+    font-weight: normal;
+    font-size: 18px;
+}
+
+.views h6{
+   color: #7A7A7A;
+   font-size: 0.6rem;
+   font-weight: lighter;
+}
+
+.views a button
+{
+	font-size: 11px;
+	padding: 6px 10px;
+}
+
+.right-arrow,.left-arrow,.Top-offers-right-arrow,.Top-offers-left-arrow,
+.Women-Accessories-right-arrow,.Women-Accessories-left-arrow,
+.Top-Deals-on-Fashion-right-arrow,.Top-Deals-on-Fashion-left-arrow,
+.best-of-electronics-right-arrow,.best-of-electronics-left-arrow,
+.fashion-for-everyone-right-arrow,.fashion-for-everyone-left-arrow,
+.top-picks-on-fashion-right-arrow,.top-picks-on-fashion-left-arrow,
+.mens-clothing-right-arrow,.mens-clothing-left-arrow,
+.furniture-best-sellers-right-arrow,.furniture-best-sellers-left-arrow,
+.top-rated-appliances-right-arrow,.top-rated-appliances-left-arrow,
+.best-battery-phones-right-arrow,.best-battery-phones-left-arrow,
+.Top-Accessories-right-arrow,.Top-Accessories-left-arrow,
+.footwear-right-arrow,.footwear-left-arrow
+{
+	height: 90px;
+	width: 40px;
+	font-size: 10px;
+}
+
+.Headphones-and-Speaker-container,.Top-offers-container,
+.Women-Accessories-container,.Top-Deals-on-Fashion-container,
+.best-of-electronics-container,.fashion-for-everyone-container,
+.top-picks-on-fashion-container,.mens-clothing-container,
+.furniture-best-sellers-container,.top-rated-appliances-container,
+.best-battery-phones-container,.Top-Accessories-container,.footwear-container
+{
+	width: 100%;
+	margin-top: 2px;
+	background-color: white;
+	overflow: hidden;
+	display: flex;
+	position: relative;
+	padding: 20px 6px;
+}
+
+.Headphones-and-Speaker-wrapper,.Top-offers-wrapper,
+.Women-Accessories-wrapper,.Top-Deals-on-Fashion-wrapper,
+.best-of-electronics-wrapper,.fashion-for-everyone-wrapper,
+.top-picks-on-fashion-wrapper,.mens-clothing-wrapper,
+.furniture-best-sellers-wrapper,.top-rated-appliances-wrapper,
+.best-battery-phones-wrapper,.Top-Accessories-wrapper,.footwear-wrapper
+{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.Headphones-and-Speaker,.Top-offers,.Women-Accessories,
+.Top-Deals-on-Fashion,.best-of-electronics,.fashion-for-everyone,
+.top-picks-on-fashion,.mens-clothing,.furniture-best-sellers,
+.top-rated-appliances,.best-battery-phones,.Top-Accessories,.footwear
+{
+	width: clamp(60px,10vw,195px);
+	height: clamp(100px,22vw,288.8px);
+	margin: 1vw 2vw 0 2vw;
+}
+
+.Headphones-and-Speaker a img,.Top-offers a img,.Women-Accessories a img,
+.Top-Deals-on-Fashion a img,.best-of-electronics a img,.fashion-for-everyone a img,
+.top-picks-on-fashion a img,.mens-clothing a img,.furniture-best-sellers a img,
+.top-rated-appliances a img,.best-battery-phones a img,.Top-Accessories a img,
+.footwear a img
+{
+	object-fit: contain;
+	padding: 6px;
+	width: 120%;
+    height: 134px;
+}
+
+.Headphones-and-Speaker-1,.Top-offers-1,.Women-Accessories-1,
+.Top-Deals-on-Fashion-1,.best-of-electronics-1,.fashion-for-everyone-1,
+.top-picks-on-fashion-1,.mens-clothing-1,.furniture-best-sellers-1,
+.top-rated-appliances-1,.best-battery-phones-1,.Top-Accessories-1,
+.footwear-1,.Headphones-and-Speaker-2,.Top-offers-2,.Women-Accessories-2,
+.Top-Deals-on-Fashion-2,.best-of-electronics-2,.fashion-for-everyone-2,
+.top-picks-on-fashion-2,.mens-clothing-2,.furniture-best-sellers-2,
+.top-rated-appliances-2,.best-battery-phones-2,.Top-Accessories-2,
+.footwear-2,.Headphones-and-Speaker-3,.Top-offers-3,.Women-Accessories-3,
+.Top-Deals-on-Fashion-3,.best-of-electronics-3,.fashion-for-everyone-3,
+.top-picks-on-fashion-3,.mens-clothing-3,.furniture-best-sellers-3,
+.top-rated-appliances-3,.best-battery-phones-3,.Top-Accessories-3,
+.footwear-3
+{
+    font-size: 11px;
+	margin-top: 9px;
+}
+
+/*=============================Footer======================================*/
+#footer{
+    font-size: 10px;
+}
+
+.about,.policy,.help,.social{
+   font-size: .6rem;
+}
+
+.mail,.register{
+	font-size: .6rem;
+}
+
+.copyrights{
+	width: 100%;
+	height: 72.9px
+	border-top: 1px solid #454d5e;
+    padding: 25px 0;
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+}
+
+@media screen and (max-width: 800px){
+
+/*==========================Search-bar Section=============================*/
+
+#iconic{
+	
+    height: clamp(28px,4vw,48px);
+    margin-right: 4px;
+}
+
+#form-search input[type=text]{
+	height: 20px;
+	padding: 2px 6px;
+}
+
+.fa-search{
+	font-size: 14px;
+	margin-right: 0.8rem;
+}
+
+.btn{
+	width: clamp(60px,3vw,115px);
+	height: clamp(25px,4vw,35px);
+}
+
+#logo{
+	width: clamp(65px,4vw,80px);
+	height:clamp(30px,4vw,36px);
+	margin-right: 4px; 
+}
+
+#logo a{
+	font-size: 9px;
+}
+
+#logo img{
+    width: 50px;
+    height: 12px;
+}
+
+#logo a img{
+	width: clamp(6px,1vw,10px);
+	height: clamp(6px,1vw,10px);
+}
+
+/*===============================Header Section=============================*/
+
+#header{
+	height: 100px;
+}
+
+#header-container{
+	width: 95%;
+}
+
+#header-container a div img{
+	width: 60px;
+	height: 60px;
+}
+
+.img-wrap a{
+	font-size: 11px;
+}
+
+.example {
+  height: 270px;
+}
+
+/*=========================Deals Section===================================*/
+
+#deals{
+	height: auto;
+}
+
+.wrap-deal{
+	height: auto;
+	margin-right: 0px;
+}
+
+.deal2{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: auto;
+}
+
+.deal3 img {
+	height: 40%;
+}
+
+.wrap-deal-1{
+	display: grid;
+	width: 100%;
+	grid-template-rows: 100%;
+	grid-template-columns: repeat(auto-fit,minmax(190px,1fr));
+	justify-content: center;
+	align-items: center;
+}
+
+
+.deal-1{
+	width: 160px;
+	height: 190px;
+	margin:14px auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.deal-1 a img{
+    width: 100%;
+    height: 140px;
+}
+
+.deal2 .dealicon{
+	display: none;
+}
+
+/*=======================All Similar Sections=========================*/
+
+#footwear,#Headphones-and-Speaker,#top-offer,#Women-Accessories,
+#top-deals-on-fashion,#best-of-electronics,#fashion-for-everyone,
+#top-picks-on-fashion,#mens-clothing,#furniture-best-sellers,
+#top-rated-appliances,#best-battery-phones,#Top-Accessories
+{
+    height: auto;
+}
+
+.wrap{
+	height: auto;
+}
+
+.Headphones-and-Speaker-container,.Top-offers-container,
+.Women-Accessories-container,.Top-Deals-on-Fashion-container,
+.best-of-electronics-container,.fashion-for-everyone-container,
+.top-picks-on-fashion-container,.mens-clothing-container,
+.furniture-best-sellers-container,.top-rated-appliances-container,
+.best-battery-phones-container,.Top-Accessories-container,.footwear-container
+{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: auto;
+}
+
+.Headphones-and-Speaker-wrapper,.Top-offers-wrapper,
+.Women-Accessories-wrapper,.Top-Deals-on-Fashion-wrapper,
+.best-of-electronics-wrapper,.fashion-for-everyone-wrapper,
+.top-picks-on-fashion-wrapper,.mens-clothing-wrapper,
+.furniture-best-sellers-wrapper,.top-rated-appliances-wrapper,
+.best-battery-phones-wrapper,.Top-Accessories-wrapper,.footwear-wrapper
+{
+	display: grid;
+	width: 100%;
+	grid-template-rows: 100%;
+	grid-template-columns: repeat(auto-fit,minmax(190px,1fr));
+	justify-content: center;
+	align-items: center;
+}
+
+.Headphones-and-Speaker,.Top-offers,.Women-Accessories,
+.Top-Deals-on-Fashion,.best-of-electronics,.fashion-for-everyone,
+.top-picks-on-fashion,.mens-clothing,.furniture-best-sellers,
+.top-rated-appliances,.best-battery-phones,.Top-Accessories,.footwear
+{
+	width: 160px;
+	height: 190px;
+	margin:14px auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.Headphones-and-Speaker a img,.Top-offers a img,.Women-Accessories a img,
+.Top-Deals-on-Fashion a img,.best-of-electronics a img,.fashion-for-everyone a img,
+.top-picks-on-fashion a img,.mens-clothing a img,.furniture-best-sellers a img,
+.top-rated-appliances a img,.best-battery-phones a img,.Top-Accessories a img,
+.footwear a img
+{
+    width: 100%;
+    height: 140px;
+}
+
+.right-arrow,.left-arrow,.Top-offers-right-arrow,.Top-offers-left-arrow,
+.Women-Accessories-right-arrow,.Women-Accessories-left-arrow,
+.Top-Deals-on-Fashion-right-arrow,.Top-Deals-on-Fashion-left-arrow,
+.best-of-electronics-right-arrow,.best-of-electronics-left-arrow,
+.fashion-for-everyone-right-arrow,.fashion-for-everyone-left-arrow,
+.top-picks-on-fashion-right-arrow,.top-picks-on-fashion-left-arrow,
+.mens-clothing-right-arrow,.mens-clothing-left-arrow,
+.furniture-best-sellers-right-arrow,.furniture-best-sellers-left-arrow,
+.top-rated-appliances-right-arrow,.top-rated-appliances-left-arrow,
+.best-battery-phones-right-arrow,.best-battery-phones-left-arrow,
+.Top-Accessories-right-arrow,.Top-Accessories-left-arrow,
+.footwear-right-arrow,.footwear-left-arrow
+{
+	display: none;
+}
+
+/*============================Footer====================================*/
+
+#footer{
+    font-size: 9px;
+}
+
+.footer-wrapper{
+	width: 100%;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-rows: min-content;
+    grid-template-columns: repeat(auto-fit,minmax(150px,1fr));
+}
+
+.about-wrapper a,
+.help-wrapper a,
+.policy-wrapper a,
+.social-wrapper a{
+	line-height: 2;
+}
+
+.mail-us-wrapper p,
+.register-wrapper p{
+	line-height: 1;
+}
+
+.copyrights{
+	width: 100%;
+	height: 72.9px
+	border-top: 1px solid #454d5e;
+    padding: 25px 0;
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+}
+
+@media screen and (max-width: 500px){
+
+/*==========================Search-bar Section=========================*/
+
+#search-bar #menu-container #logo .fa-bars{
+	display: inline;
+}
+
+.fa-search{
+	margin-right: 4px;
+}
+
+.fa-bars{
+	color: white;
+	font-size: 14px;
+}
+
+.fa-search{
+	font-size: 12px;
+}
+
+#search-bar,#menu-container,#bar-container,#form-search,.cart-logo-wrapper{
+	display: block;
+}
+
+#search-bar{
+    width: 100vw;
+	height: 76px;
+	min-width: 250px;
+	display: flex;
+	justify-content: center;	
+}
+
+#menu-container{
+    width: 98%;
+    height: 94%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+
+#form-search #iconic input[type=text]{
+	width: 88%;
+	height: 15px;
+	font-size: 11px;
+	padding: 4px 4px;
+}
+#iconic{
+	width: 96%;
+	height: 25px;
+	border-radius: 3px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+}
+#bar-container{
+    width: 100%;
+    height: 20px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    bottom: 4px;
+}
+
+#form-search{
+	width: 100%;
+	height: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+}
+
+
+.cart-logo-wrapper{
+	width: 20%;
+	display: flex;
+	flex-direction: row-reverse;
+	justify-content: space-between;
+	position: absolute;
+	top: 9px;
+	right: 10%;
+	}
+
+#logo{
+	width: 20%;
+	display: flex;
+	position: absolute;
+	top: 9px;
+	left: 11px;
+}
+
+.btn{
+	width: 12px;
+	height: 0px;
+	background-color:#2874F0; 
+	color: white;
+	margin-left: 12px;
+}
+
+.more,.cart a{
+	display: none;
+}
+
+.cart{
+	margin-left: 4px;
+}
+
+#logo .logo-contain{
+	margin-left: 10px;
+}
+
+#logo a{
+    font-size: 10px;
+    margin-top: -3px;
+    display: flex;
+}
+
+#logo img{
+    width: 55px;
+    height: 14px;
+    display: block;
+}
+
+#logo a img{
+	width: 7px;
+	height: 7px;
+	margin-top: 3px;
+	margin-left: 2px;
+}
+
+/*===============================Header Section=============================*/
+
+#header{
+	width: 100vw;
+	height: 70px;
+	display: flex;
+	justify-content: flex-start;
+}
+
+#header-container{
+	width: 500px;
+	max-height: 90%;
+	display: flex;
+	justify-content: flex-start;
+	text-align: center;
+}
+
+#header-container a div img{
+	width: 35px;
+	height: 35px;
+	margin-left: 8px;
+}
+
+.img-wrap a{
+	width: 60px;
+	height: 60px;
+	font-size: 9px;
+}
+
+.img-wrap a .fa-chevron-down{
+	display: none;
+}
+
+.example {
+  max-width: 100vw;
+  min-width: 250px;
+  height: 120px;
+}
+
+.slides_container{
+	max-width: 100%; 
+}
+
+/*=========================Deals Section===================================*/
+
+#deals{
+	display: grid;
+}
+
+.wrap-deal{
+	width: 96vw;	
+}
+
+.deal1{
+	height: 60px;
+	margin-bottom: .4vh;
+	padding-right: 12px;
+	padding-left: 12px;
+}
+
+.deal1 h4{
+	font-size: 11px;
+}
+
+.deal1 a button {
+	font-size: 10px;
+	padding: 4px 4px;
+}
+
+.deal2{
+	width: 96vw;
+	padding: 20px 6px;
+}
+
+.deal3{
+	width: 96vw;
+}
+
+.deal3 img {
+	width: 100%;
+	height: 100%;
+}
+
+.wrap-deal-1{
+	grid-template-columns: repeat(auto-fit,minmax(140px,1fr));
+}
+
+.deal-1{
+	width: 140px;
+}
+
+/*=======================All Similar Sections=========================*/
+
+.views{
+    height: 60px;
+	margin-bottom: .4vh;
+	padding-right: 12px;
+	padding-left: 12px;
+}
+
+.views h4{
+    font-size: 11px;
+}
+
+.views h6{
+   font-size: 0.5rem;
+}
+
+.views a button
+{
+	font-size: 10px;
+	padding: 4px 4px
+}
+
+.wrap{
+	width: 96vw;
+}
+
+.Headphones-and-Speaker-container,.Top-offers-container,
+.Women-Accessories-container,.Top-Deals-on-Fashion-container,
+.best-of-electronics-container,.fashion-for-everyone-container,
+.top-picks-on-fashion-container,.mens-clothing-container,
+.furniture-best-sellers-container,.top-rated-appliances-container,
+.best-battery-phones-container,.Top-Accessories-container,.footwear-container
+{
+	width: 96vw;
+	padding: 20px 6px;
+}
+
+.Headphones-and-Speaker-wrapper,.Top-offers-wrapper,
+.Women-Accessories-wrapper,.Top-Deals-on-Fashion-wrapper,
+.best-of-electronics-wrapper,.fashion-for-everyone-wrapper,
+.top-picks-on-fashion-wrapper,.mens-clothing-wrapper,
+.furniture-best-sellers-wrapper,.top-rated-appliances-wrapper,
+.best-battery-phones-wrapper,.Top-Accessories-wrapper,.footwear-wrapper
+{
+	grid-template-columns: repeat(auto-fit,minmax(140px,1fr));
+}
+
+.Headphones-and-Speaker,.Top-offers,.Women-Accessories,
+.Top-Deals-on-Fashion,.best-of-electronics,.fashion-for-everyone,
+.top-picks-on-fashion,.mens-clothing,.furniture-best-sellers,
+.top-rated-appliances,.best-battery-phones,.Top-Accessories,.footwear
+{
+	width: 140px;
+}
+
+/*===========================Footer============================*/
+
+#footer{
+	width: 100vw;
+	min-width: 305px;
+}
+
+.footer-wrapper{
+	width: 100%;
+    display: grid;
+    grid-gap: 4px;
+    grid-template-rows: min-content;
+    grid-template-columns: repeat(auto-fit,minmax(90px,1fr));
+    line-height:2;
+}
+
+.about-wrapper a,
+.help-wrapper a,
+.policy-wrapper a,
+.social-wrapper a{
+	font-size: 9px;
+	height: auto; 
+}
+
+.mail-us-wrapper p,
+.register-wrapper p{
+	font-size: 9px;
+	line-height: .9rem;
+	margin-bottom: .6rem;
+	height: auto;
+}
+
+.copyrights{
+	width: 100%;
+	height: 72.9px;
+	border-top: 1px solid #454d5e;
+    padding: 25px 0;
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+}
+
